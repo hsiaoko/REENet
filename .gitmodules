@@ -1,0 +1,3 @@
+[submodule "lib/cfasttext"]
+	path = lib/cfasttext
+	url = https://github.com/messense/cfasttext
