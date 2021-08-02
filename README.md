@@ -1,17 +1,10 @@
 # REENet
-PER
+Instructions
 ========
 Install
 -------
-```Bash
-Copy your ML model ()
-sudo apt install libyaml-cpp-dev
-sudo apt install libsqlite3-dev
-sudo apt install mpich
-mkdir build
-cd build
-cmake ../
-make
+```
+1. Copy your ML models to "./models"
 ```
 Run
 ------
