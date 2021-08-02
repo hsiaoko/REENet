@@ -1,7 +1,7 @@
 # REENet
-Instructions
+
 ========
-Install
+Instructions
 -------
 ```
 1. Copy your ML models to "./models"
