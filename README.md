@@ -19,5 +19,5 @@ Instructions
 5. Check path of your models in "./examples/main.cc"
 4. Bash: mkdir build & cd build
 5. Bash: cmake ..
-6. Bash: ./exe_reenet or put 
+6. Bash: "./exe_reenet" or mv "./libreenet.so" to you library.
 ```
