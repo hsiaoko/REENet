@@ -1,7 +1,7 @@
 # REENet
 Torch-based, implementation of similarity classification that identity two tuples with the same semantic similarity. It return true if two tuples are referring as the same real world entity.
 
-Build and start Ditto locally
+Build and start REENet locally
 -------
 In order to build REENet, you'll need
 ```
