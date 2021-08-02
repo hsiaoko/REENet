@@ -5,18 +5,19 @@ Build and start Ditto locally
 -------
 In order to build REENet, you'll need
 ```
-1.  torch/script.h
+1.  libtorch >= 1.7.1
 2.  Torch >= 1.0
 ```
 
 Instructions
 -------
 ```
+0. Download Libtorch from \url{https://pytorch.org/cppdocs/installing.html} to "./lib"
 1. Train embeding model by source code provided "./python/train".
 2. Train classification model by source code provided by "./pyhton/train_classifier.py"
 3. Copy your classification and embeding models to "./models/"
 5. Check path of your models in "./examples/main.cc"
 4. Bash: mkdir build & cd build
 5. Bash: cmake ..
-6. Bash: ./exe_reenet
+6. Bash: ./exe_reenet or put 
 ```
