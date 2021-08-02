@@ -3,7 +3,7 @@ Torch-based, implementation of similarity classification that identity two tuple
 
 Build and start Ditto locally
 -------
-In order to build Ditto, you'll need
+In order to build REENet, you'll need
 ```
 1.  torch/script.h
 2.  Torch >= 1.0
