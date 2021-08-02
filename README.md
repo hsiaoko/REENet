@@ -12,7 +12,7 @@ In order to build REENet, you'll need
 Instructions
 -------
 ```
-0. Download Libtorch from \url{https://pytorch.org/cppdocs/installing.html} to "./lib"
+0. Download Libtorch from https://pytorch.org/cppdocs/installing.html to "./lib"
 1. Train embeding model by source code provided "./python/train".
 2. Train classification model by source code provided by "./pyhton/train_classifier.py"
 3. Copy your classification and embeding models to "./models/"
