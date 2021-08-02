@@ -1,10 +1,12 @@
 # REENet
+Torch-based, implementation of similarity classification that i dentity two tuples with the same semantic similarity
 
 
 Instructions
 -------
 ```
 1. Copy your ML models to "./models"
+2. 
 ```
 Run
 ------
