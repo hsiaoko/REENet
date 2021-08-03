@@ -7,6 +7,7 @@ In order to build REENet, you'll need
 ```
 1.  libtorch >= 1.7.1
 2.  Torch >= 1.0
+3.  CUDA >= 11.0
 ```
 
 Instructions
