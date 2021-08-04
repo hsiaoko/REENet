@@ -22,6 +22,7 @@ Instructions
 5. Bash: cmake ..
 6. Bash: "./exe_reenet" or mv "./libreenet.so" to you library.
 7. Rewrite your similarity function with
+```
 > std::string str_l = "Modeling High-Dimensional Index Structures using Sampling";
     std::string str_r = "On-line reorganization of sparsely-populated B+-trees";
     bool der = reemodule.ML(
@@ -29,4 +30,3 @@ Instructions
         str_r
     );
     cout<<der<<endl;
-```
