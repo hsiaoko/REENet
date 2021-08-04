@@ -23,6 +23,10 @@ Instructions
 6. Bash: "./exe_reenet" or mv "./libreenet.so" to you library.
 7. Rewrite your similarity function with
 ```
+    #include "../include/cfasttext.h"
+    #include "../include/core.h"
+    #include <torch/script.h> // One-stop header.
+    
     reenet::REEModule reemodule = reenet::REEModule("embeding model xx.bin", "ML model xx.pt");
 
     std::string str_l = "Modeling High-Dimensional Index Structures using Sampling";
