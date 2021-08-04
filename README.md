@@ -22,7 +22,7 @@ Build and start REENet locally
 5. Check the path of your models in "./examples/main.cc"
 4. Bash: mkdir build & cd build
 5. Bash: cmake ..
-6. Bash: "./exe_reenet" or mv "./libreenet.so" to you library.
+6. Bash: "./exe_mrlnet" or mv "./libmrlnet.so" to you library.
 7. Rewrite your similarity function as follows:
 
 ```

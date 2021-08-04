@@ -20,46 +20,47 @@ float get_score(float *sentence_vec_l_, float *sentence_vec_r_, size_t lev_vec_)
 vector<vector<std::string> *> *read_csv(bool read_head, char split_symbol, std::string csv_path_);
 void split_string(const string &s, vector<string> &v, const string &c);
 
-namespace reenet
+namespace mrlnet
 {
-    class REEModule
-    {
-    private:
-        char *errptr = new char[8];
-        fasttext_t *handle = cft_fasttext_new();
-        torch::jit::script::Module module;
-        std::string fasttext_bin_pth;
-        std::string model_bin_pth;
-    public:
-        REEModule();
-        ~REEModule();
-        REEModule(std::string fasttext_bin_pth, std::string model_bin_pth);
+class MRLModule
+{
+private:
+    char *errptr = new char[8];
+    fasttext_t *handle = cft_fasttext_new();
+    torch::jit::script::Module module;
+    std::string fasttext_bin_pth;
+    std::string model_bin_pth;
+public:
+    MRLModule();
+    ~MRLModule();
+    MRLModule(std::string fasttext_bin_pth, std::string model_bin_pth);
 
-        bool ML(std::string l_sentense, std::string r_sentense);
+    bool ML(std::string l_sentense, std::string r_sentense);
 
-        void embeding(std::string, float **, std::vector<size_t> *);
-        static void split_string(const string &s, vector<string> &v, const string &c);
-    };
+    void embeding(std::string, float **, std::vector<size_t> *);
+    float *rnn_embeding(std::string sentense, size_t embeding_size);
+    static void split_string(const string &s, vector<string> &v, const string &c);
+};
 
-    class CSVLoader
-    {
-    private:
+class CSVLoader
+{
+private:
 
-    public:
-        std::string csv_path_;
-        size_t data_size_;
-        std::vector<std::vector<std::string>*> *tuples_;
+public:
+    std::string csv_path_;
+    size_t data_size_;
+    std::vector<std::vector<std::string>*> *tuples_;
 
-        CSVLoader(std::string csv_path, char split_symbol, bool read_head);
+    CSVLoader(std::string csv_path, char split_symbol, bool read_head);
 
-        void ShowTuple(std::vector<std::string> *tuple);
-        void ShowCSV();
-        void ShowCSV(size_t k);
-        void ShowCSV(std::vector<std::vector<std::string> *> *tuples, size_t k);
-        std::vector<string> * split_str(string s);
-        vector<vector<std::string> *> * read_csv(bool read_head, char split_symbol, std::string csv_path_);
-        void freeTuples();
-    };
+    void ShowTuple(std::vector<std::string> *tuple);
+    void ShowCSV();
+    void ShowCSV(size_t k);
+    void ShowCSV(std::vector<std::vector<std::string> *> *tuples, size_t k);
+    std::vector<string> *split_str(string s);
+    vector<vector<std::string> *> *read_csv(bool read_head, char split_symbol, std::string csv_path_);
+    void freeTuples();
+};
 
-} //end namespace reenet
+} //end namespace mrlnet
 #endif //TOOLS_H_
