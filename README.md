@@ -24,7 +24,7 @@ Build and start REENet locally
 5. Check the path of your models in "./examples/main.cc"
 4. Bash: mkdir build & cd build
 5. Bash: cmake ..
-6. Bash: "./exe_mrlnet" or mv "./libmrlnet.so" to you library.
+6. Bash: "./exe_mrlnet" or mv "./libmrlnet.so" to you library (where you pointed in CMakeLists.txt, e.g, PER-code/lib).
 7. Rewrite your similarity function as follows:
 
 ```
@@ -32,14 +32,16 @@ Build and start REENet locally
     #include "../include/core.h"
     #include <torch/script.h> // One-stop header.
     
-    reenet::REEModule reemodule = reenet::REEModule("embeding model xx.bin", "ML model xx.pt");
+    mrlnet::MRLModule mrlmodule = mrlnet::MRLModule("embeding model xx.bin", "ML model xx.pt");
 
     std::string str_l = "Modeling High-Dimensional Index Structures using Sampling";
     std::string str_r = "On-line reorganization of sparsely-populated B+-trees";
-    bool der = reemodule.ML(
+    bool der = mrlmodule.ML(
         str_l,
         str_r
     );
     cout<<der<<endl;
 ```
-
+Contact Us
+-------
+Questions and comments are also welcome at the MRLNet users mailing list: hsiaoko.chu@gamil.com
