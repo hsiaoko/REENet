@@ -10,6 +10,8 @@ In order to build REENet, you also need the following:
   1.  libtorch >= 1.7.1
   2.  Torch >= 1.0
   3.  CUDA >= 11.0
+  4.  cfasttext
+  5.  fasttext
 ```
 
 Build and start REENet locally
